@@ -4,7 +4,7 @@
       <nuxt-link :to="`/products/${product.handle}`">
         <div class="card">
           <div class="card-image">
-            <figure class="image is-4by3" v-if="product.images[0].src !== null">
+            <figure class="image is-4by5" v-if="product.images[0].src !== null">
               <img :src="product.images[0].src" :alt="product.images[0].altText">
             </figure>
             <figure v-else class="is-flex">

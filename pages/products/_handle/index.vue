@@ -7,7 +7,7 @@
             v-for="(image, index) in product.images"
             :key="index"
           >
-            <span class="image">
+            <span class="image is-4by5">
               <img
                 :src="image.src"
                 style="max-width: 25rem"
@@ -31,9 +31,39 @@
           <div class="card-content">
             <div class="columns">
               <div class="column">
-                <h1 class="title">
-                  {{ product.title }}
-                </h1>
+              <h1 class="title">{{ product.title }}</h1>      
+              
+                  <br>
+
+
+
+        <div v-for="option in productOptions"
+            :key="option.id"
+            class="field">
+            <div class="control">
+              <label
+                :for="option.name"
+                class="label">
+                {{ option.name }}
+                <div class="select is-fullwidth">
+                  <select
+                    :id="option.name"
+                    v-model="selectedOptions[option.name]">
+                    <option
+                      v-for="(value, index) in option.values"
+                      :key="index"
+                      :value="value">
+                      {{ value }}
+                    </option>
+                  </select>
+                </div>
+              </label>
+            </div>
+          </div>
+
+
+
+
               </div>
             </div>
             <div class="columns">
@@ -66,7 +96,7 @@
                   class="mx-2"
                   @click="addToCart(product.variants[0].id, quantity)"
                 >
-                  Ajouter
+                  Buy Now
                 </b-button>
               </div>
             </div>
@@ -92,9 +122,13 @@ export default {
   data () {
     return {
       product: {},
-      quantity: 1
+      quantity: 1,
+      selectedOptions:{},
     }
   },
+computed: {
+  productOptions () { return this.product.options.filter(({ name }) => name !== 'Title') },
+},
   head () {
     return {
       title: this.$store.state.shop.name + ' | ' + this.product.title,
