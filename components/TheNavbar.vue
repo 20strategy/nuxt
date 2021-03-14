@@ -2,10 +2,7 @@
   <b-navbar>
     <template slot="brand">
       <b-navbar-item tag="nuxt-link" to="/">
-        <img
-          src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
-          alt="Lightweight UI components for Vue.js based on Bulma"
-        >
+       <p style="font-size:1.5rem;font-weight:bold;color:blue;letter-spacing:2px;">DOGTIC</p>
       </b-navbar-item>
     </template>
     <template slot="start">
