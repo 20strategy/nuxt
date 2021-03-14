@@ -32,6 +32,7 @@
             <div class="columns">
               <div class="column">
               <h1 class="title">{{ product.title }}</h1>      
+         
               
                   <br>
 
