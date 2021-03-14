@@ -77,7 +77,7 @@
             <div class="columns">
               <div class="column">
                 <p class="is-size-3">
-                  {{ product.variants[0].price }} €
+                 $ {{ product.variants[0].price }} 
                 </p>
               </div>
             </div>

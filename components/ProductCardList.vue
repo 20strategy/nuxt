@@ -21,7 +21,7 @@
                   {{ product.title }}
                 </p>
                 <p class="subtitle is-6">
-                  {{ product.variants[0].price }} €
+                  $ {{ product.variants[0].price }}
                 </p>
               </div>
             </div>
