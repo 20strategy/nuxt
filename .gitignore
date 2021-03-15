@@ -56,7 +56,7 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
+
 .env
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -71,8 +71,7 @@ typings/
 # Nuxt generate
 dist
 
-# vuepress build output
-.vuepress/dist
+
 
 # Serverless directories
 .serverless
