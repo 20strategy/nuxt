@@ -4,7 +4,7 @@
       <div class="columns">
         <div class="column has-text-centered">
           <p class="footer-link">
-            Made with Time and Patience <a href="https://github.com/20strategy"> Andrew Kim</a>
+            Made with Time and Patience <a href="https://github.com/20strategy"> Andrew Kim - Dogtic.com CEO</a>
           </p>
         </div>
       </div>
