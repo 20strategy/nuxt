@@ -4,7 +4,7 @@
       <div class="columns">
         <div class="column has-text-centered">
           <p class="footer-link">
-            Made with ❤️, 🍺 and ☕ by <a href="https://github.com/thomas-philippot"> Thomas Philippot</a>
+            Made with Time and Patience <a href="https://github.com/20strategy"> Andrew Kim</a>
           </p>
         </div>
       </div>
