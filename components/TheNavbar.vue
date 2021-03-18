@@ -2,7 +2,7 @@
   <b-navbar>
     <template slot="brand">
       <b-navbar-item tag="nuxt-link" to="/">
-       <p style="font-size:1.5rem;font-weight:bold;color:blue;letter-spacing:2px;">DOGTIC</p>
+       <p style="font-size:1.5rem;font-weight:bold;color:blue;letter-spacing:2px;margin-right:10px;">puppyous</p>
       </b-navbar-item>
     </template>
     <template slot="start">
@@ -10,7 +10,13 @@
         tag="nuxt-link"
         to="/products"
       >
-        Products
+       Shop
+      </b-navbar-item>
+       <b-navbar-item
+        tag="nuxt-link"
+        to="/collection"
+      >
+        Collections
       </b-navbar-item>
       <b-navbar-dropdown label="Blog">
         <b-navbar-item

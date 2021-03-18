@@ -1,18 +1,17 @@
 <template>
   <div class="container">
     <div class="columns">
-      <div class="column is-4">
+      <div class="column is-half">
         <b-carousel :indicator-inside="false">
           <b-carousel-item
             v-for="(image, index) in product.images"
             :key="index"
           >
-            <span class="image is-4by5">
+            <span class="image">
               <img
                 :src="image.src"
-                style="max-width: 25rem"
-                :alt="product.description"
-              >
+                style="max-width: 50rem"
+                :alt="product.description">
             </span>
           </b-carousel-item>
           <template slot="indicators" slot-scope="props">
@@ -20,8 +19,7 @@
               <img
                 :src="product.images[props.i].src"
                 :alt="product.description"
-                style="max-width: 5rem"
-              >
+                style="max-width: 8rem" >
             </span>
           </template>
         </b-carousel>
@@ -31,10 +29,7 @@
           <div class="card-content">
             <div class="columns">
               <div class="column">
-              <h1 class="title">{{ product.title }}</h1>      
-         
-              
-                  <br>
+              <h1 class="title">{{ product.title }}</h1>               
 
 
 
@@ -62,11 +57,36 @@
             </div>
           </div>
 
-
+  <div class="columns">
+              <div class="column">
+                <p class="is-size-3">
+                 $ {{ product.variants[0].price }} 
+                </p>
+              </div>
+            </div>
+            
+            <div class="columns is-flex">
+              <div class="column is-2">
+                <p>Quantity</p>
+              </div>
+              <div class="column is-6">
+                <b-numberinput
+                  v-model.number="quantity"
+                />
+              </div> </div>
+              <div class="">
+                <b-button
+                  icon-left="cart"
+                  type="is-danger"
+                  @click="addToCart(product.variants[0].id, quantity)">
+                  Buy Now
+                </b-button>
+              </div>
+            </div>
 
 
               </div>
-            </div>
+            
             <div class="columns">
               <div class="column">
                 <p
@@ -75,34 +95,10 @@
                 />
               </div>
             </div>
-            <div class="columns">
-              <div class="column">
-                <p class="is-size-3">
-                 $ {{ product.variants[0].price }} 
-                </p>
-              </div>
-            </div>
-            <div class="columns is-flex">
-              <div class="column is-1">
-                <p>Quantity</p>
-              </div>
-              <div class="column is-3">
-                <b-numberinput
-                  v-model.number="quantity"
-                />
-              </div>
-              <div class="column is-7">
-                <b-button
-                  icon-left="cart"
-                  class="mx-2"
-                  @click="addToCart(product.variants[0].id, quantity)"
-                >
-                  Buy Now
-                </b-button>
-              </div>
-            </div>
+          
           </div>
         </div>
+      </div>
       </div>
     </div>
   </div>

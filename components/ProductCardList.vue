@@ -29,8 +29,7 @@
               <b-button
                 type="is-primary"
                 icon-left="cart"
-                @click="addToCart(product.variants[0].id, 1)"
-              >
+                @click="addToCart(product.variants[0].id, 1)">
                 Buy
               </b-button>
             </div>

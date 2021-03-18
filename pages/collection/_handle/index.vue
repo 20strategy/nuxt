@@ -17,15 +17,7 @@
       </div>
     </section>
     <div class="container">
-      <section class="articles section">
-        <div class="card article">
-          <div class="card-content">
-            <div class="content article-body">
-              <p v-html="collection.descriptionHtml" />
-            </div>
-          </div>
-        </div>
-      </section>
+    
       <section class="section">
         <div class="container">
           <div class="columns">

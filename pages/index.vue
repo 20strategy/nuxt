@@ -1,11 +1,41 @@
 <template>
+  
+      <div class="container">    
+        <div class="container">
+  <div class="columns is-vcentered is-multiline">
+          <div class="column hero-body is-half-tablet is-one-half-widescreen">
+            <div class="indexhero-text has-text-centered">
+              <h1 class="title is-size-2">
+                Walk and Play ♬
+              </h1>
+              <div class="content"> 
+                <p>You love your puppy and you love your walk. Walking will bring your dog and you closer everyday. Let's make walking more pleasant.</p>
+              </div>
+              <nuxt-link
+                to="/products"
+                class="button is-primary is-outlined">
+                Shop Now
+              </nuxt-link>
+            </div>
+          </div>
+          <div class="column is-half-tablet is-one-half-widescreen"> 
+              <img
+                src="https://images.ctfassets.net/80g45033v4tf/63IDbt2v0lBynjVg9QTQDh/d554fa5d4df1e71957d77a9369a151c8/homepage-image.webp"
+                alt="A model is holding a puppy" />
+           
+          </div>
+  </div>
+        
+      </div>
+   
+   
+  
   <div class="full-width">
     <section class="section">
       <div class="container">
         <div class="columns">
           <div class="column">
-            <h1 class="is-size-2">My home page</h1>
-            <p>This website is for developpement purpose, please don't try to buy something here.</p>
+           <h2 class="has-text-centered">Welcome to puppyrous.com</h2>
           </div>
         </div>
       </div>
@@ -13,8 +43,7 @@
     <div
       v-for="collection in collections"
       :key="collection.id"
-      class="columns collection-banner"
-    >
+      class="columns collection-banner">
       <div class="column">
         <nuxt-link :to="`/collection/${collection.handle}`">
           <section class="hero is-large is-info">
@@ -24,8 +53,7 @@
                 backgroundImage: (collection.image === null) ? '' : `url(${collection.image.src})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover'
-              }"
-            >
+              }">
               <div class="container">
                 <h1 class="title is-shadow">
                   {{ collection.title }}
@@ -37,6 +65,7 @@
       </div>
     </div>
   </div>
+   </div>
 </template>
 
 <script>
@@ -103,5 +132,10 @@ export default {
 .collection-banner {
   margin-bottom: 2rem;
   margin-top: 2rem !important;
+}
+.indexhero-text{
+  width: 90%;
+  margin-left:auto;
+  margin-right:auto;
 }
 </style>
