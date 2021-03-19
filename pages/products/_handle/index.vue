@@ -48,8 +48,8 @@
                     <option
                       v-for="(value, index) in option.values"
                       :key="index"
-                      :value="value">
-                      {{ value }}
+                      :value="value.value">
+                      {{ value.value }}
                     </option>
                   </select>
                 </div>
