@@ -1,11 +1,13 @@
 # Shopify Storefront using NUXT JS/ SSR using Vercel
+[puppyous.com](https://dog-nuxt.vercel.app)
+It is hosted on Vercel for SSR.
 
 ## Fully Functional
 
 > Nuxt js front-end integration for shopify store
 
 ## Build Setup
-
+```
 # install dependencies
 $ npm run install
 
@@ -18,12 +20,13 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 ## Configuration
 
-Simply register these variable in a .env file
+Simply put these variables in a .env file (root file)
 
 ```dotenv
 DOMAIN=<your-store.myshopify.com/>
