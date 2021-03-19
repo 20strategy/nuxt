@@ -76,10 +76,17 @@
               </div> </div>
               <div class="">
                 <b-button
+                  v-if="stockAvailable"
                   icon-left="cart"
                   type="is-danger"
                   @click="addToCart(productId, quantity)">
                   Buy Now
+                </b-button>
+                <b-button
+                    disabled
+                    v-else
+                    type="is-black">
+                  Sold Out
                 </b-button>
               </div>
             </div>
@@ -107,6 +114,9 @@
 import cartMixins from '../../../mixins/cartMixins'
 
 function getMatchingVariant(selectedOptions, productVariants) {
+  if (productVariants.length === 1) {
+    return productVariants[0];
+  }
   const matchingVariant = productVariants.filter(variant =>
       variant.selectedOptions.every(
           option => (selectedOptions[option.name] === option.value)));
@@ -134,26 +144,25 @@ export default {
       return this.product.options.filter(({ name }) => name !== 'Title')
     },
     productPrice () {
-      const productVariants = this.product.variants;
-      if (productVariants.length === 1) {
-        return productVariants[0].price;
-      }
-      const matchingVariant = getMatchingVariant(this.selectedOptions, productVariants);
+      const matchingVariant = getMatchingVariant(this.selectedOptions, this.product.variants);
       if (typeof(matchingVariant) !== 'undefined') {
         return matchingVariant.price;
       }
       return '';
     },
     productId () {
-      const productVariants = this.product.variants;
-      if (productVariants.length === 1) {
-        return productVariants[0].id;
-      }
-      const matchingVariant = getMatchingVariant(this.selectedOptions, productVariants);
+      const matchingVariant = getMatchingVariant(this.selectedOptions, this.product.variants);
       if (typeof(matchingVariant) !== 'undefined') {
         return matchingVariant.id;
       }
       return '';
+    },
+    stockAvailable () {
+      const matchingVariant = getMatchingVariant(this.selectedOptions, this.product.variants);
+      if (typeof(matchingVariant) !== 'undefined') {
+        return matchingVariant.available;
+      }
+      return false;
     }
   },
   head () {
