@@ -89,7 +89,7 @@
             
             <div class="columns">
               <div class="column">
-                <p
+                <div
                   class="subtitle"
                   v-html="product.descriptionHtml"
                 />
@@ -98,7 +98,6 @@
           
           </div>
         </div>
-      </div>
       </div>
     </div>
   </div>
@@ -123,9 +122,9 @@ export default {
       selectedOptions:{},
     }
   },
-computed: {
-  productOptions () { return this.product.options.filter(({ name }) => name !== 'Title') },
-},
+  computed: {
+    productOptions () { return this.product.options.filter(({ name }) => name !== 'Title') },
+  },
   head () {
     return {
       title: this.$store.state.shop.name + ' | ' + this.product.title,
