@@ -60,7 +60,7 @@
   <div class="columns">
               <div class="column">
                 <p class="is-size-3">
-                 $ {{ product.variants[0].price }}
+                 $ {{ productPrice }}
                 </p>
               </div>
             </div>
@@ -78,7 +78,7 @@
                 <b-button
                   icon-left="cart"
                   type="is-danger"
-                  @click="addToCart(product.variants[0].id, quantity)">
+                  @click="addToCart(productId, quantity)">
                   Buy Now
                 </b-button>
               </div>
@@ -106,6 +106,13 @@
 <script>
 import cartMixins from '../../../mixins/cartMixins'
 
+function getMatchingVariant(selectedOptions, productVariants) {
+  const matchingVariant = productVariants.filter(variant =>
+      variant.selectedOptions.every(
+          option => (selectedOptions[option.name] === option.value)));
+  return matchingVariant[0];
+}
+
 export default {
   name: 'Index',
   mixins: [
@@ -125,6 +132,28 @@ export default {
   computed: {
     productOptions () {
       return this.product.options.filter(({ name }) => name !== 'Title')
+    },
+    productPrice () {
+      const productVariants = this.product.variants;
+      if (productVariants.length === 1) {
+        return productVariants[0].price;
+      }
+      const matchingVariant = getMatchingVariant(this.selectedOptions, productVariants);
+      if (typeof(matchingVariant) !== 'undefined') {
+        return matchingVariant.price;
+      }
+      return '';
+    },
+    productId () {
+      const productVariants = this.product.variants;
+      if (productVariants.length === 1) {
+        return productVariants[0].id;
+      }
+      const matchingVariant = getMatchingVariant(this.selectedOptions, productVariants);
+      if (typeof(matchingVariant) !== 'undefined') {
+        return matchingVariant.id;
+      }
+      return '';
     }
   },
   head () {
