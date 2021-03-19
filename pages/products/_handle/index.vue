@@ -60,7 +60,7 @@
   <div class="columns">
               <div class="column">
                 <p class="is-size-3">
-                 $ {{ product.variants[0].price }} 
+                 $ {{ product.variants[0].price }}
                 </p>
               </div>
             </div>
@@ -119,11 +119,13 @@ export default {
     return {
       product: {},
       quantity: 1,
-      selectedOptions:{},
+      selectedOptions: {}
     }
   },
   computed: {
-    productOptions () { return this.product.options.filter(({ name }) => name !== 'Title') },
+    productOptions () {
+      return this.product.options.filter(({ name }) => name !== 'Title')
+    }
   },
   head () {
     return {
@@ -132,6 +134,12 @@ export default {
         { hid: 'description', name: 'description', content: this.product.description }
       ]
     }
+  },
+  mounted() {
+    // Automatically select first of each variant
+    let options = this.product.options.filter(({ name }) => name !== 'Title');
+    this.selectedOptions = Object.fromEntries(
+        options.map(({name, values}) => [name, values[0].value]));
   }
 }
 </script>
