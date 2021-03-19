@@ -1,4 +1,6 @@
-# Shopify Storefront
+# Shopify Storefront using NUXT JS/ SSR using Vercel
+
+## Fully Functional
 
 > Nuxt js front-end integration for shopify store
 
