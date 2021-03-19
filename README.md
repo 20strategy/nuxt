@@ -1,6 +1,8 @@
 # Shopify Storefront using NUXT JS/ SSR using Vercel
 [puppyous.com](https://dog-nuxt.vercel.app)
-It is hosted on Vercel for SSR.
+> It is hosted on Vercel for SSR.
+> CSS Framework: Bulma 
+> We are open to any suggestions or comments.
 
 ## Fully Functional
 
