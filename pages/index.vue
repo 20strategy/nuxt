@@ -35,7 +35,7 @@
       <div class="container">
         <div class="columns">
           <div class="column">
-           <h2 class="has-text-centered">Welcome to puppyrous.com</h2>
+           <h2 class="has-text-centered has-text-weight-light">Welcome to puppyrous.com</h2>
           </div>
         </div>
       </div>

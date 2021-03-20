@@ -27,7 +27,7 @@ $colors: (
 $body-background-color: $light;
 
 // Links
-$link: $primary;
+
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
@@ -47,9 +47,7 @@ p.footer-link > a:hover {
 }
 
 // My custom theme
-.nuxt-link-exact-active {
-  border-bottom: 2px solid $primary;
-}
+
 
 .card {
   border-radius: .6rem;

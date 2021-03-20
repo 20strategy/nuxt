@@ -1,4 +1,5 @@
 <template>
+<div class="container">
   <b-navbar>
     <template slot="brand">
       <b-navbar-item tag="nuxt-link" to="/">
@@ -43,6 +44,7 @@
       </b-navbar-item>
     </template>
   </b-navbar>
+  </div>
 </template>
 
 <script>
@@ -62,4 +64,10 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 100px;
+}
 </style>

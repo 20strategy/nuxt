@@ -29,8 +29,8 @@
               <b-button
                 type="is-primary"
                 icon-left="cart"
-                @click="addToCart(product.variants[0].id, 1)">
-                Buy
+                :to="`/products/${product.handle}`">
+                View More
               </b-button>
             </div>
           </div>

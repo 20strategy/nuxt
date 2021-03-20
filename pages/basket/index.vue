@@ -2,7 +2,7 @@
   <div class="container">
     <div v-if="checkout.lineItems.length === 0">
       <div class="column">
-        <h1 class="is-size-1">
+        <h1 class="is-size-1 has-text-centered">
           Empty Cart
         </h1>
       </div>
@@ -23,26 +23,28 @@
                 <template slot-scope="props">
                   <b-table-column field="image" label="Image">
                     <figure class="image is-96x96">
-                      <img class="is-rounded" :src="props.row.variant.image.src" :alt="props.row.description">
+                      <img class="is-square" :src="props.row.variant.image.src" :alt="props.row.description">
                     </figure>
                   </b-table-column>
                   <b-table-column field="title" label="Title">
                     <p class="title">
-                      {{ props.row.title }}
+                      {{ props.row.title }}</p>
+                      <p clss="subtitle">
+                      {{props.row.variant.title}} 
                     </p>
                   </b-table-column>
                   <b-table-column field="price" label="Price">
-                    {{ props.row.variant.price }}€
+                    ${{ props.row.variant.price }}
                   </b-table-column>
                   <b-table-column field="quantity" label="Quantity">
                     {{ props.row.quantity }}
                   </b-table-column>
                   <b-table-column field="total" label="Total">
-                    {{ getItemTotal(props.row) }} €
+                    $ {{ getItemTotal(props.row) }} 
                   </b-table-column>
                   <b-table-column field="delete" label="Delete">
                     <b-button
-                      class="is-danger"
+                      class="is-white-bis"
                       icon-left="delete"
                       @click="deleteItem(props.row.id)"
                     >
@@ -56,15 +58,16 @@
                 </div>
                 <div class="column is-2 is-pulled-right">
                   <p class="subtitle">
-                    Subtotal : {{ checkout.subtotalPrice }} €
+                    Subtotal : ${{ checkout.subtotalPrice }} 
                   </p>
+                  <p style="font-size:11px">Shipping and tax will be calculated on the next page</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <b-button
+      <b-button class="is-pulled-right mr-4"
         type="is-primary"
         @click="confirmCheckout"
       >

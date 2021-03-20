@@ -37,7 +37,8 @@
                   #{{ tag }}
                 </b-tag>
               </b-taglist>
-              <time datetime="2016-1-1">{{ article.node.publishedAt }}</time>
+              <p class="tag is-rounded is-info has-text-left">{{ $moment(article.publishedAt).format('DD MMMM Y') }}</p>
+            
             </div>
           </div>
         </div>

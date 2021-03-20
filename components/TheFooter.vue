@@ -2,21 +2,17 @@
   <footer class="footer">
     <div class="content has-text-light">
       <div class="columns">
-        <div class="column has-text-centered">
+        <div class="column has-text-left">
           <p class="footer-link">
-            Made with time and patience <a href="https://github.com/20strategy"> Andrew Kim - PUPPYOUS CEO</a>
+            puppyous.com
           </p>
         </div>
       </div>
       <div class="columns">
+
         <div class="column is-4">
           <p class="footer-link-title">
-            Newsletter
-          </p>
-        </div>
-        <div class="column is-4">
-          <p class="is-size-5">
-            Policy
+         Policy
           </p>
           <p class="footer-link">
             <nuxt-link to="/">
@@ -24,7 +20,7 @@
             </nuxt-link>
           </p>
           <p class="footer-link">
-            <nuxt-link to="/">
+            <nuxt-link to="/policy/refund-policy">
               Refund Policy
             </nuxt-link>
           </p>
@@ -34,9 +30,29 @@
             </nuxt-link>
           </p>
         </div>
+
         <div class="column is-4">
           <p class="is-size-5">
-            FAQ
+            Information
+          </p>
+          <p style="color:turquoise"class="footer-link">
+            Email: bark@puppyous.com
+          </p>
+          <p style="color:turquoise" class="footer-link">
+            Location: Los Angeles, CA
+          </p>
+          <p class="footer-link">
+            <nuxt-link to="/">
+             
+            </nuxt-link>
+          </p>
+        </div>
+
+        
+        <div class="column is-4">
+          <p class="is-size-5">
+            
+
           </p>
         </div>
       </div>
@@ -54,11 +70,15 @@ export default {
   .footer-link-title {
     font-size: 1.25rem;
     font-weight: 600;
+
   }
 
   .footer-link {
     margin-top: .5rem;
     margin-bottom: 0 !important;
+    }
+  a {
+    color: turquoise;
   }
 
 </style>
