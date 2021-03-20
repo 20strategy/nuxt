@@ -56,7 +56,7 @@ While we are continuing to relearn about dogs, my first commitment to comsumers 
                     <label>Questions or Concerns</label>
                     <div>
                         <input style="margin-top: 5px;background-color: #fff; height:120px; width:95%; text-indent: 5px; border-radius:0px;border: 1px solid;" 
-                        type="email" name="email" placeholder="Enter your message" required="required">
+                        type="text" name="message" placeholder="Enter your message" required="required">
                     </div>
                 </div>
         
