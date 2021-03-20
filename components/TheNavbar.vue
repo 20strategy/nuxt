@@ -3,7 +3,7 @@
   <b-navbar>
     <template slot="brand">
       <b-navbar-item tag="nuxt-link" to="/">
-       <p style="font-size:1.5rem;font-weight:bold;color:blue;letter-spacing:2px;margin-right:10px;">puppyous</p>
+       <p class="logo-font">Puppy<span class="ous">Ous</span></p>
       </b-navbar-item>
     </template>
     <template slot="start">
@@ -64,12 +64,26 @@ export default {
 </script>
 
 <style scoped>
+.logo-font {
+  margin-bottom:3px;
+  font-size:2rem;
+  font-weight:bold;
+  color:rgb(82, 82, 245);
+  letter-spacing:2px;
+  margin-right:10px;
+}
+.ous{
+  color:tomato;
+  
+}
 .container {
   padding-top: 20px;
   padding-right: 10px;
   padding-left: 10px;
   height: 100px;}
 
-
+a.navbar-link.is-active {
+  background-color: red;
+}
 
 </style>
