@@ -69,5 +69,6 @@ export default {
   padding-right: 10px;
   padding-left: 10px;
   height: 100px;
+  background-color:#f5f5f5;
 }
 </style>
