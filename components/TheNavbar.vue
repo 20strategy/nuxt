@@ -70,7 +70,7 @@ export default {
   padding-left: 10px;
   height: 100px;}
 
-.navbar-menu{
+.navbar{
   background-color:#f5f5f5 !important;
 }
 </style>
