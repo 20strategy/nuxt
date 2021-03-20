@@ -92,7 +92,7 @@ export default {
                         }
                       }
                     },
-                    collections (first: 250) {
+                    collections (first: 10) {
                       edges {
                         node {
                           handle

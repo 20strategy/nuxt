@@ -9,6 +9,12 @@
     <template slot="start">
       <b-navbar-item
         tag="nuxt-link"
+        to="/about"
+      >
+       About
+      </b-navbar-item>
+      <b-navbar-item
+        tag="nuxt-link"
         to="/products"
       >
        Shop
