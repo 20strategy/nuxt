@@ -38,7 +38,6 @@
 <script>
 import ProductCardList from '../../../components/ProductCardList'
 export default {
-  layout: 'noContainer',
   components: {
     ProductCardList
   },

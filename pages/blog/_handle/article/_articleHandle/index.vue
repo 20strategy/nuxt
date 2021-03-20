@@ -16,15 +16,15 @@
           <div class="card-content">
             <div class="media">
               <div class="media-content has-text-centered">
-                <p class="title article-title">{{ article.title }}</p>
-                <div class="tags has-addons level-item">
-                  <span class="tag is-rounded is-info">@{{ article.authorV2.name }}</span>
-                  <span class="tag is-rounded">{{ $moment(article.publishedAt, $moment.ISO_8601).format('DD MMMM Y') }}</span>
-                </div>
+                <h1 class="title article-title">{{ article.title }}</h1>
+                
+                  <span class="tag is-rounded is-info">{{ $moment(article.publishedAt, $moment.ISO_8601).format('DD MMMM Y') }}</span>
+               
               </div>
             </div>
             <div class="content article-body">
               <p v-html="article.contentHtml" />
+              <p class="tag is-rounded is-info">@{{ article.authorV2.name }}</p>
             </div>
           </div>
         </div>
@@ -36,7 +36,6 @@
 <script>
 export default {
   name: 'Index',
-  layout: 'noContainer',
   asyncData ({ app, params }) {
     return app.$axios({
       method: 'POST',

@@ -1,9 +1,9 @@
 {
-  "name": "shopify-storefront",
+  "name": "puppyous.com",
   "version": "1.0.0",
-  "description": "My premium Nuxt.js project",
-  "author": "thomas",
-  "private": true,
+  "description": "For your puppies",
+  "author": "Andrew Kim",
+  "private": false,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",

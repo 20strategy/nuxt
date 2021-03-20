@@ -34,7 +34,7 @@
     <template slot="end">
       <b-navbar-item tag="div">
         <div class="buttons">
-          <nuxt-link to="/basket" class="button is-primary">
+          <nuxt-link to="/cart" class="button is-primary">
             <b-icon
               icon="cart"
             />

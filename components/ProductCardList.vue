@@ -9,7 +9,7 @@
             </figure>
             <figure v-else class="is-flex">
               <img
-                src="/img/no-image.jpg"
+                src="https://images.ctfassets.net/80g45033v4tf/2satd8ZlwbBgXT9P2ETMjf/d25c7a73f97982985272bd404bcf6607/no-image.jpg"
                 alt="image-not-found"
               >
             </figure>

@@ -10,7 +10,7 @@
         <p>We are bringing new things. Sign up now to receive the exclusive offer.</p>
         <br><br>
 
-        <input type="text" class="button is-white-ish" id="email" name="email" placeholder="Email">
+       <input type="text" class="button is-white-ish" id="email" name="email" placeholder="Email">&nbsp;
         <input type="submit" class="button is-danger" id="submit" value="Sign Up">
         <br>
      

@@ -24,17 +24,17 @@
          Policy
           </p>
           <p class="footer-link">
-            <nuxt-link to="/">
-              Privacy Policy
-            </nuxt-link>
-          </p>
-          <p class="footer-link">
             <nuxt-link to="/policy/refund-policy">
               Refund Policy
             </nuxt-link>
           </p>
           <p class="footer-link">
-            <nuxt-link to="/">
+            <nuxt-link to="/shipping">
+              Shipping Policy
+            </nuxt-link>
+          </p>
+          <p class="footer-link">
+            <nuxt-link to="/policy/terms-of-service">
               Terms of service
             </nuxt-link>
           </p>

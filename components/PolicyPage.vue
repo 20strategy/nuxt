@@ -25,8 +25,6 @@ export default {
   width: 95%;
   margin-right:auto;
   margin-left: auto;
-
-
 }
 
 </style>
