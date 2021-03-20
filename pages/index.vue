@@ -8,7 +8,7 @@
               <div class="content"> 
                 <p>You love your puppy and you love your walk. Walking will bring your dog and you closer everyday. Let's make walking more pleasant.</p>
               </div>
-              <nuxt-link to="/products"class="button is-primary is-outlined">
+              <nuxt-link to="/products"class="button is-twitter">
                Shop Now
               </nuxt-link>
           </div>
