@@ -1,5 +1,14 @@
 <template>
+ 
+
+<div>
+  <br>
+ <section>
+      <Subscribe/>
+          <br>
+  </section>
   <footer class="footer">
+
     <div class="content has-text-light">
       <div class="columns">
         <div class="column has-text-left">
@@ -35,10 +44,10 @@
           <p class="is-size-5">
             Information
           </p>
-          <p style="color:turquoise"class="footer-link">
+          <p class="footer-link">
             Email: bark@puppyous.com
           </p>
-          <p style="color:turquoise" class="footer-link">
+          <p class="footer-link">
             Location: Los Angeles, CA
           </p>
           <p class="footer-link">
@@ -58,10 +67,16 @@
       </div>
     </div>
   </footer>
+  </div>
 </template>
 
 <script>
+
+import Subscribe from "@/components/Subscribe"
 export default {
+  components:{
+    Subscribe,
+  },
   name: 'TheFooter'
 }
 </script>
@@ -76,6 +91,7 @@ export default {
   .footer-link {
     margin-top: .5rem;
     margin-bottom: 0 !important;
+    color:turquoise;
     }
   a {
     color: turquoise;

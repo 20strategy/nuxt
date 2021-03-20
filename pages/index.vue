@@ -65,11 +65,16 @@
       </div>
     </div>
   </div>
+
+    
    </div>
 </template>
 
 <script>
+
+
 export default {
+
   layout: 'noContainer',
   asyncData ({ app }) {
     return app.$axios({

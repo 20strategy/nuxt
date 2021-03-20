@@ -22,7 +22,8 @@
         <div class="container">
           <div class="columns">
             <div class="column">
-              <h2 class="is-size-4">Products in this collection</h2>
+              <h2 class="is-size-4 has-text-centered">Products in this collection</h2>
+              <br>
             </div>
           </div>
           <product-card-list
