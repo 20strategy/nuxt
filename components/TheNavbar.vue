@@ -68,7 +68,9 @@ export default {
   padding-top: 20px;
   padding-right: 10px;
   padding-left: 10px;
-  height: 100px;
-  background-color:#f5f5f5;
+  height: 100px;}
+
+.navbar-menu{
+  background-color:#f5f5f5 !important;
 }
 </style>
