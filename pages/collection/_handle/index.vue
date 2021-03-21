@@ -4,7 +4,7 @@
       <div
         class="hero-body"
         :style="{
-          backgroundImage: (collection.image === null) ? '' : `url(${collection.image.src})`,
+          backgroundImage: `url(${collection.image.src})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover'
         }"

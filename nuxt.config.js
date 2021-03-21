@@ -1,7 +1,7 @@
 require('dotenv').config()
 const axios = require("axios")
 export default {
- 
+
   head: {
     meta: [
       { charset: 'utf-8' },
@@ -15,9 +15,7 @@ export default {
   ** Customize the progress-bar color
   */
   loading: { color: '#00d1b2' },
-  /*
-  ** Global CSS
-  */
+ 
   css: [
     '~/assets/bulma.scss'
   ],
@@ -28,13 +26,36 @@ export default {
     { src: '~/plugins/localStorage.js', ssr: false },
     
   ],
+  router: {
+    prefetchLinks: false
+  },
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    'nuxt-purgecss',
   ],
+  purgeCSS: {
+    enabled: ({ isDev, isClient }) => (!isDev && isClient),
+    paths: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js'
+      
+    ],
+    styleExtensions: ['.css'],
+    whitelist: ['body', 'html', 'nuxt-progress'],
+    extractors: [
+      {
+        extractor: content => content.match(/[A-z0-9-:\\/]+/g) || [],
+        extensions: ['html', 'vue', 'js']
+      }
+    ]
+  },
+
   /*
   ** Nuxt.js modules
   */
@@ -44,6 +65,7 @@ export default {
     'nuxt-shopify',
     'nuxt-buefy',
     'nuxt-moment',
+    'nuxt-purgecss'
   ],
   /*
   ** Axios module configuration

@@ -77,8 +77,7 @@ While we are continuing to relearn about dogs, my first commitment to comsumers 
 <script>
 export default {
     metaInfo: {
-        title: 'puppyous.com',
-        description: 'About page',
+        title: 'puppyous.com'
     },
 }
 <script>

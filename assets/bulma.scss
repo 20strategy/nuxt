@@ -1,4 +1,4 @@
-// Import Bulma's core
+
 @import "~bulma/sass/utilities/_all";
 
 // Set your colors
@@ -19,7 +19,6 @@ $colors: (
   "info": ($info, $info-invert),
   "success": ($success, $success-invert),
   "warning": ($warning, $warning-invert),
-  "danger": ($danger, $danger-invert),
   "twitter": ($twitter, $twitter-invert)
 );
 

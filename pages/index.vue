@@ -8,28 +8,26 @@
               <div class="content"> 
                 <p>You love your puppy and you love your walk. Walking will bring your dog and you closer everyday. Let's make walking more pleasant.</p>
               </div>
-              <nuxt-link to="/products"class="button is-twitter">
+              <nuxt-link to="/products" class="button is-twitter">
                Shop Now
               </nuxt-link>
           </div>
         </div>
         <div class="column is-half-tablet is-one-half-widescreen"> 
             <img
-              src="~/static/index-page.jpg"
+              src="https://images.ctfassets.net/80g45033v4tf/1f8itQq4arrIR2OCT6wJHO/8e0ff37a7e2149e84fd94bc1e2feb35e/homepage_1080_andblank_harness_and_model.jpg"
               alt="A model is holding a puppy" />
            
         </div>
       </div>  
     </div>
-   
-   
-  
+    
     <div class="full-width">
       <section class="section">
           <div class="container">
             <div class="columns">
               <div class="column">
-                <h2 class="has-text-centered has-text-weight-light">Welcome to puppyrous.com</h2>
+                <h2 class="has-text-centered has-text-weight-light">Welcome to puppyous.com</h2>
               </div>
             </div>
         </div>
@@ -44,7 +42,7 @@
             <div
               class="hero-body"
               :style="{
-                backgroundImage: (collection.image === null) ? '' : `url(${collection.image.src})`,
+                backgroundImage:`url(${collection.image.src})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover'}">
                     <div class="container">
@@ -57,11 +55,14 @@
     </div>
     </div>
 
+
     
   </div>
 </template>
 
 <script>
+
+
 export default {
   asyncData ({ app }) {
     return app.$axios({
