@@ -223,7 +223,7 @@ Last updated: <i>03/20./2021</i>
 export default {
     metaInfo: {
         title: 'puppyous.com',
-        description: 'shipping policy',
+        description: 'Privacy policy',
     },
 }
 <script>

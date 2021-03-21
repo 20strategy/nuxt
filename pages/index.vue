@@ -62,8 +62,6 @@
 </template>
 
 <script>
-
-
 export default {
   asyncData ({ app }) {
     return app.$axios({

@@ -1,22 +1,31 @@
 <template>
   <div class="app">
+
+<LazyHydrate when-visible>
     <the-navbar />
+</LazyHydrate>
+
     <section id="content-wrap" class="section">
+
       <nuxt />
     </section>
+<LazyHydrate when-visible>
     <the-footer />
+    </LazyHydrate>
+
   </div>
 </template>
 
-<style>
-</style>
+
 <script>
 import TheNavbar from '../components/TheNavbar'
 import TheFooter from '../components/TheFooter'
+import LazyHydrate from 'vue-lazy-hydration'
 export default {
   components: {
     TheFooter,
-    TheNavbar
+    TheNavbar,
+    LazyHydrate,
   }
 }
 </script>

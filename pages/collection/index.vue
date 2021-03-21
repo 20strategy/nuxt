@@ -39,7 +39,7 @@
 <script>
 export default {
   
-  asyncData ({ app }) {
+asyncData ({ app }) {
     return app.$axios({
       method: 'POST',
       data: {

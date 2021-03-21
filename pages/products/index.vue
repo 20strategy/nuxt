@@ -1,23 +1,25 @@
 <template>
   <div class="container">
+    <LazyHydrate when-visible>
     <product-card-list
-      :products="products"
-    />
+      :products="products" />
+      </LazyHydrate>
+
+
   </div>
 </template>
 
 <script>
-import cartMixins from '../../mixins/cartMixins'
+
 import ProductCardList from '../../components/ProductCardList'
+import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   name: 'Index',
   components: {
-    ProductCardList
+    ProductCardList,
+    LazyHydrate,
   },
-  mixins: [
-    cartMixins
-  ],
   async asyncData ({ $shopify, store }) {
     const products = await $shopify.product.fetchAll()
     store.commit('setProducts', products)

@@ -14,8 +14,8 @@
 <script>
 export default {
     metaInfo: {
-        title: 'puppyous.com',
-        description: 'shipping policy',
+        title: 'puppyous.com-policy',
+        description: 'Terms of sevice',
     },
 }
 <script>
