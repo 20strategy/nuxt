@@ -18,9 +18,11 @@
             <div
               class="hero-body"
               :style="{
-                backgroundImage:`url(${collection.image.src})`,
+                backgroundImage: (collection.image === null) ? '' : `url(${collection.image.src})`,
                 backgroundPosition: 'center',
-                backgroundSize: 'cover'}">
+                backgroundSize: 'cover'
+              }"
+            >
               <div class="container">
                 <h1 class="title is-shadow">
                   {{ collection.title }}
@@ -36,11 +38,8 @@
 
 <script>
 export default {
-<<<<<<< HEAD
-=======
   
->>>>>>> parent of be1b377 (applied)
-  asyncData ({ app }) {
+asyncData ({ app }) {
     return app.$axios({
       method: 'POST',
       data: {
@@ -49,13 +48,21 @@ export default {
                 name,
                 description
               },
+              blogs(first: 10) {
+                edges {
+                    node {
+                      handle,
+                      title
+                    }
+                  }
+              }
             }`
       }
     }).then((response) => {
       return {
         description: response.data.data.shop.description,
         shop: response.data.data.shop,
-        
+        blogs: response.data.data.blogs.edges
       }
     })
   },
@@ -95,4 +102,3 @@ export default {
   margin-top: 2rem !important;
 }
 </style>
-
