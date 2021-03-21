@@ -26,6 +26,9 @@ export default {
     { src: '~/plugins/localStorage.js', ssr: false },
     
   ],
+  router: {
+    prefetchLinks: false
+  },
   /*
   ** Nuxt.js dev-modules
   */
