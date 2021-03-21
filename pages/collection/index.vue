@@ -20,9 +20,7 @@
               :style="{
                 backgroundImage:`url(${collection.image.src})`,
                 backgroundPosition: 'center',
-                backgroundSize: 'cover'
-              }"
-            >
+                backgroundSize: 'cover'}">
               <div class="container">
                 <h1 class="title is-shadow">
                   {{ collection.title }}
@@ -38,8 +36,7 @@
 
 <script>
 export default {
-  
-asyncData ({ app }) {
+  asyncData ({ app }) {
     return app.$axios({
       method: 'POST',
       data: {

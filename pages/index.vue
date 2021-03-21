@@ -27,7 +27,7 @@
           <div class="container">
             <div class="columns">
               <div class="column">
-                <h2 class="has-text-centered has-text-weight-light">Welcome to puppyrous.com</h2>
+                <h2 class="has-text-centered has-text-weight-light">Welcome to puppyous.com</h2>
               </div>
             </div>
         </div>
@@ -61,10 +61,7 @@
 </template>
 
 <script>
-
-
 export default {
- 
   asyncData ({ app }) {
     return app.$axios({
       method: 'POST',

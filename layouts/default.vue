@@ -1,14 +1,13 @@
 <template>
   <div class="app">
-
 <LazyHydrate when-visible>
     <the-navbar />
 </LazyHydrate>
 
-    <section id="content-wrap" class="section">
-<LazyHydrate when-visible>
-      <nuxt />
-        </LazyHydrate>
+    <section id="content-wrap" class="section"> 
+   
+        <nuxt />
+        
     </section>
 <LazyHydrate when-visible>
     <the-footer />

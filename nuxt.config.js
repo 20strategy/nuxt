@@ -15,9 +15,7 @@ export default {
   ** Customize the progress-bar color
   */
   loading: { color: '#00d1b2' },
-  /*
-  ** Global CSS
-  */
+ 
   css: [
     '~/assets/bulma.scss'
   ],
