@@ -1,7 +1,7 @@
 require('dotenv').config()
 const axios = require("axios")
 export default {
- 
+  
   head: {
     meta: [
       { charset: 'utf-8' },
