@@ -44,6 +44,7 @@ export default {
       'layouts/**/*.vue',
       'pages/**/*.vue',
       'plugins/**/*.js'
+      
     ],
     styleExtensions: ['.css'],
     whitelist: ['body', 'html', 'nuxt-progress'],
@@ -64,6 +65,7 @@ export default {
     'nuxt-shopify',
     'nuxt-buefy',
     'nuxt-moment',
+    'nuxt-purgecss'
   ],
   /*
   ** Axios module configuration

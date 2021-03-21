@@ -15,7 +15,7 @@
         </div>
         <div class="column is-half-tablet is-one-half-widescreen"> 
             <img
-              src="~/static/index-page.jpg"
+              src="https://images.ctfassets.net/80g45033v4tf/1f8itQq4arrIR2OCT6wJHO/8e0ff37a7e2149e84fd94bc1e2feb35e/homepage_1080_andblank_harness_and_model.jpg"
               alt="A model is holding a puppy" />
            
         </div>

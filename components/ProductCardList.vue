@@ -4,15 +4,10 @@
       <nuxt-link :to="`/products/${product.handle}`">
         <div class="card">
           <div class="card-image">
-            <figure class="image is-4by5" v-if="product.images[0].src !== null">
+            <figure class="image is-4by5">
               <img :src="product.images[0].src" :alt="product.images[0].altText">
             </figure>
-            <figure v-else class="is-flex">
-              <img
-                src="https://images.ctfassets.net/80g45033v4tf/2satd8ZlwbBgXT9P2ETMjf/d25c7a73f97982985272bd404bcf6607/no-image.jpg"
-                alt="image-not-found"
-              >
-            </figure>
+           
           </div>
           <div class="card-content">
             <div class="media">

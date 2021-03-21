@@ -8,18 +8,13 @@
       <nuxt-link :to="`/blog/${blog.handle}/article/${article.node.handle}`">
         <div class="card">
           <div class="card-image">
-            <figure v-if="article.node.image !== null">
+            <figure >
               <img
                 :src="article.node.image.originalSrc"
                 :alt="article.node.image.altText"
               >
             </figure>
-            <figure v-else class="is-flex">
-              <img
-                src="https://images.ctfassets.net/80g45033v4tf/2satd8ZlwbBgXT9P2ETMjf/d25c7a73f97982985272bd404bcf6607/no-image.jpg"
-                alt="image-not-found"
-              >
-            </figure>
+          
           </div>
           <div class="card-content">
             <p class="title is-4">
