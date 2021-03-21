@@ -1,27 +1,23 @@
 <template>
   <div class="container">
-<<<<<<< HEAD
     <LazyHydrate when-visible>
       <product-card-list :products="products" />
       </LazyHydrate>
 
 
-=======
-    <product-card-list
-      :products="products"
-    />
->>>>>>> parent of be1b377 (applied)
   </div>
 </template>
 
 <script>
 import cartMixins from '../../mixins/cartMixins'
 import ProductCardList from '../../components/ProductCardList'
-
+import LazyHydrate from 'vue-lazy-hydration'
 export default {
   name: 'Index',
   components: {
-    ProductCardList
+    ProductCardList,
+    LazyHydrate,
+
   },
   mixins: [
     cartMixins
