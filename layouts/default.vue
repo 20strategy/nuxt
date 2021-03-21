@@ -18,14 +18,12 @@
 
 
 <script>
-import TheNavbar from '../components/TheNavbar'
-import TheFooter from '../components/TheFooter'
-import LazyHydrate from 'vue-lazy-hydration'
+
 export default {
   components: {
-    TheFooter,
-    TheNavbar,
-    LazyHydrate,
+    TheFooter:() => import('@/components/TheFooter'),
+    TheNavbar:() => import('@/components/TheNavbar'),
+    LazyHydrate: () => import ('vue-lazy-hydration'),
   }
 }
 </script>
