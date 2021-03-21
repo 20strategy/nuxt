@@ -27,8 +27,7 @@
             </div>
           </div>
           <product-card-list
-            :products="collection.products"
-          />
+            :products="collection.products" />
         </div>
       </section>
     </div>
