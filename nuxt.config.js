@@ -11,10 +11,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#00d1b2' },
+
  
   css: [
     '~/assets/bulma.scss'
@@ -64,7 +61,7 @@ export default {
     '@nuxtjs/axios',
     'nuxt-shopify',
     'nuxt-buefy',
-    'nuxt-moment',
+    '@nuxtjs/dayjs',
     'nuxt-purgecss'
   ],
   /*

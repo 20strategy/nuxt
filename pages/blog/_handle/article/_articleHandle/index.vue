@@ -18,7 +18,7 @@
               <div class="media-content has-text-centered">
                 <h1 class="title article-title">{{ article.title }}</h1>
                 
-                  <span class="tag is-rounded is-info">{{ $moment(article.publishedAt, $moment.ISO_8601).format('DD MMMM Y') }}</span>
+                  <span class="tag is-rounded is-info">{{ $dayjs(article.publishedAt, $dayjs.ISO_8601).format('DD MMMM Y') }}</span>
                
               </div>
             </div>

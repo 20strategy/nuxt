@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import moment from 'moment/src/moment'
+import dayjs from '@nuxtjs/dayjs'
 
-moment.locale('en')
-Vue.use(moment)
+dayjs.locale('en')
+Vue.use(dayjs)
 
-export default function({ $moment }) {
-  console.log($moment().format('LTS'))
+export default function({ $dayjs }) {
+  console.log($dayjs().format('LTS'))
 }
