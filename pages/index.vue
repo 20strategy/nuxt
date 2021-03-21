@@ -8,7 +8,7 @@
               <div class="content"> 
                 <p>You love your puppy and you love your walk. Walking will bring your dog and you closer everyday. Let's make walking more pleasant.</p>
               </div>
-              <nuxt-link to="/products"class="button is-twitter">
+              <nuxt-link to="/products" class="button is-twitter">
                Shop Now
               </nuxt-link>
           </div>
@@ -21,9 +21,7 @@
         </div>
       </div>  
     </div>
-   
-   
-  
+    
     <div class="full-width">
       <section class="section">
           <div class="container">
@@ -44,7 +42,7 @@
             <div
               class="hero-body"
               :style="{
-                backgroundImage: (collection.image === null) ? '' : `url(${collection.image.src})`,
+                backgroundImage:`url(${collection.image.src})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover'}">
                     <div class="container">
@@ -57,12 +55,16 @@
     </div>
     </div>
 
+
     
   </div>
 </template>
 
 <script>
+
+
 export default {
+ 
   asyncData ({ app }) {
     return app.$axios({
       method: 'POST',

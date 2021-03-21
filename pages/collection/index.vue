@@ -18,7 +18,7 @@
             <div
               class="hero-body"
               :style="{
-                backgroundImage: (collection.image === null) ? '' : `url(${collection.image.src})`,
+                backgroundImage:`url(${collection.image.src})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover'
               }"
@@ -48,21 +48,13 @@ asyncData ({ app }) {
                 name,
                 description
               },
-              blogs(first: 10) {
-                edges {
-                    node {
-                      handle,
-                      title
-                    }
-                  }
-              }
             }`
       }
     }).then((response) => {
       return {
         description: response.data.data.shop.description,
         shop: response.data.data.shop,
-        blogs: response.data.data.blogs.edges
+        
       }
     })
   },

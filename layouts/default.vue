@@ -6,8 +6,9 @@
 </LazyHydrate>
 
     <section id="content-wrap" class="section">
-
+<LazyHydrate when-visible>
       <nuxt />
+        </LazyHydrate>
     </section>
 <LazyHydrate when-visible>
     <the-footer />

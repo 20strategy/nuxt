@@ -7,9 +7,9 @@
     </div>
     <div class="columns">
       <div class="column">
-        <blog-card-list
-          :blog="blog"
-        />
+<LazyHydrate when-visible>
+        <blog-card-list :blog="blog" />
+</LazyHydrate>
       </div>
     </div>
   </div>
@@ -17,10 +17,12 @@
 
 <script>
 import BlogCardList from '../../../components/BlogCardList'
+import LazyHydrate from 'vue-lazy-hydration'
 export default {
   name: 'Index',
   components: {
-    BlogCardList
+    BlogCardList,
+    LazyHydrate
   },
   asyncData ({ app, params }) {
     return app.$axios({
