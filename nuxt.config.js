@@ -1,7 +1,7 @@
 require('dotenv').config()
 const axios = require("axios")
 export default {
-  
+
   head: {
     meta: [
       { charset: 'utf-8' },
@@ -34,8 +34,27 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    'nuxt-purgecss',
   ],
+  purgeCSS: {
+    enabled: ({ isDev, isClient }) => (!isDev && isClient),
+    paths: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js'
+    ],
+    styleExtensions: ['.css'],
+    whitelist: ['body', 'html', 'nuxt-progress'],
+    extractors: [
+      {
+        extractor: content => content.match(/[A-z0-9-:\\/]+/g) || [],
+        extensions: ['html', 'vue', 'js']
+      }
+    ]
+  },
+
   /*
   ** Nuxt.js modules
   */
