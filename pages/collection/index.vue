@@ -36,6 +36,10 @@
 
 <script>
 export default {
+<<<<<<< HEAD
+=======
+  
+>>>>>>> parent of be1b377 (applied)
   asyncData ({ app }) {
     return app.$axios({
       method: 'POST',

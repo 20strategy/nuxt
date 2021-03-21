@@ -29,7 +29,7 @@
 export default {
     metaInfo: {
         title: 'puppyous.com',
-        description: 'Return policy',
+        description: 'return policy',
     },
 }
 <script>

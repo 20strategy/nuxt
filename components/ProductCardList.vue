@@ -36,10 +36,11 @@
 </template>
 
 <script>
-
+import cartMixins from '../mixins/cartMixins'
 
 export default {
   name: 'ProductCardList',
+  mixins: [cartMixins],
   props: {
     products: {
       type: Array,
