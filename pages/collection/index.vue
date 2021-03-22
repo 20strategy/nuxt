@@ -7,6 +7,7 @@
        
       </div>
     </section>
+    <lazy-component>
     <div
       v-for="collection in collections"
       :key="collection.id"
@@ -32,7 +33,7 @@
           </section>
         </nuxt-link>
       </div>
-    </div>
+    </div></lazy-component>
   </div>
 </template>
 

@@ -7,9 +7,9 @@
     </div>
     <div class="columns">
       <div class="column">
-<LazyHydrate when-visible>
+    <lazy-component>
         <blog-card-list :blog="blog" />
-</LazyHydrate>
+    </lazy-component>
       </div>
     </div>
   </div>

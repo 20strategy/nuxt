@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <LazyHydrate when-visible>
+    <lazy-component>
       <product-card-list :products="products" />
-      </LazyHydrate>
+    </lazy-component>
 
 
   </div>
