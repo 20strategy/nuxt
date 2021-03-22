@@ -32,7 +32,7 @@
             </div>
         </div>
       </section>
-    <div
+    <lazy-component
       v-for="collection in collections"
       :key="collection.id"
       class="columns collection-banner">
@@ -52,7 +52,7 @@
           </section>
         </nuxt-link>
       </div>
-    </div>
+    </lazy-component>
     </div>
 
 
@@ -64,7 +64,11 @@
 
 
 export default {
+  
   asyncData ({ app }) {
+    components: [
+
+    ]
     return app.$axios({
       method: 'POST',
       data: {

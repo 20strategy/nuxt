@@ -21,6 +21,7 @@ export default {
   */
   plugins: [
     { src: '~/plugins/localStorage.js', ssr: false },
+    '@/plugins/vue-lazyload',
     
   ],
   router: {
