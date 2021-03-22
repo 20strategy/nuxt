@@ -1,6 +1,8 @@
 <template>
-  <div class="container">    
+  <div class="container">
+     
     <div class="container">
+       <lazy-component>   
       <div class="columns is-vcentered is-multiline">
         <div class="column hero-body is-half-tablet is-one-half-widescreen">
           <div class="indexhero-text has-text-centered">
@@ -13,15 +15,16 @@
               </nuxt-link>
           </div>
         </div>
-        <lazy-component>
+       
         <div class="column is-half-tablet is-one-half-widescreen"> 
             <img
               src="https://images.ctfassets.net/80g45033v4tf/1f8itQq4arrIR2OCT6wJHO/8e0ff37a7e2149e84fd94bc1e2feb35e/homepage_1080_andblank_harness_and_model.jpg"
               alt="A model is holding a puppy" />
            
         </div> 
-        </lazy-component>
+       
       </div>  
+       </lazy-component>
     </div>
     
     <div class="full-width">
