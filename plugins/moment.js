@@ -5,5 +5,5 @@ dayjs.locale('en')
 Vue.use(dayjs)
 
 export default function({ $dayjs }) {
-  console.log($dayjs().format('LTS'))
+  console.log($dayjs().format('LL'))
 }

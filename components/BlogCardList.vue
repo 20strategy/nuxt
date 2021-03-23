@@ -32,7 +32,9 @@
                   #{{ tag }}
                 </b-tag>
               </b-taglist>
-              <p class="tag is-rounded is-info has-text-left">{{ $dayjs(article.publishedAt).format('DD MMMM Y') }}</p>
+              
+              <p class="tag is-rounded is-info has-text-left">{{ $dayjs(article.node.publishedAt, $dayjs.ISO_8601).format('MMMM D, YYYY') }}</p>
+            
             
             </div>
           </div>

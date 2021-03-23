@@ -21,8 +21,8 @@
 <style scoped >
 .subscribe {
   background-color: orange;
-  margin-bottom:20px;
-  margin-top:20px;
+  margin-bottom:10rem;
+  margin-top:7rem;
   padding-bottom:30px;
 }
 </style>
