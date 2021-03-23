@@ -11,7 +11,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
-
+ googleAnalytics: {
+   id: 'UA-178410458-1',
+ },
  
   css: [
     '~/assets/bulma.scss'
@@ -34,6 +36,7 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     'nuxt-purgecss',
+    '@nuxtjs/google-analytics'
   ],
   purgeCSS: {
     enabled: ({ isDev, isClient }) => (!isDev && isClient),
