@@ -53,7 +53,7 @@ export default {
                         title,
                         description
                       }
-                      image (maxWidth: 2000) {
+                      image (maxWidth: 1200) {
                         altText,
                         originalSrc
                       }

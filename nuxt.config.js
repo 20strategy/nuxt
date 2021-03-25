@@ -1,5 +1,7 @@
 require('dotenv').config()
 const axios = require("axios")
+
+
 export default {
 
   head: {
@@ -24,6 +26,7 @@ export default {
   plugins: [
     { src: '~/plugins/localStorage.js', ssr: false },
     '@/plugins/vue-lazyload',
+  
     
   ],
   router: {
@@ -36,8 +39,10 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     'nuxt-purgecss',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+  
   ],
+
   purgeCSS: {
     enabled: ({ isDev, isClient }) => (!isDev && isClient),
     paths: [
@@ -66,8 +71,14 @@ export default {
     'nuxt-shopify',
     'nuxt-buefy',
     '@nuxtjs/dayjs',
-    'nuxt-purgecss'
+    'nuxt-purgecss',
+  
+    
+  
+     
+    
   ],
+ 
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options

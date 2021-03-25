@@ -34,7 +34,7 @@
         >
           {{ blog.node.title }}
         </b-navbar-item>
-      </b-navbar-dropdown>
+      </b-navbar-dropdown>       
     </template>
 
     <template slot="end">
